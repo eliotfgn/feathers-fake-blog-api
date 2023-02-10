@@ -52,6 +52,7 @@
     "@feathersjs/transport-commons": "^5.0.0-pre.33",
     "@feathersjs/typebox": "^5.0.0-pre.33",
     "knex": "^2.3.0",
+    "melter": "^0.0.1",
     "sqlite3": "^5.1.2",
     "winston": "^3.8.2"
   },

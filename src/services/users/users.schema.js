@@ -11,6 +11,7 @@ export const userSchema = Type.Object(
     email: Type.String({format: 'email'}),
     username: Type.String({minLength: 5}),
     password: Type.String({minLength: 6}),
+    profilePic: Type.String(),
     created_at: Type.String({ format: 'date-time' }),
     updated_at: Type.String({ format: 'date-time' }),
   },
@@ -28,7 +29,7 @@ export const userExternalResolver = resolve({
 })
 
 // Schema for the basic data model (e.g. creating new entries)
-export const userDataSchema = Type.Pick(userSchema, ['email', 'username', 'password'], {
+export const userDataSchema = Type.Pick(userSchema, ['email', 'username', 'password', 'profilePic'], {
   $id: 'UserData',
   additionalProperties: false
 })
